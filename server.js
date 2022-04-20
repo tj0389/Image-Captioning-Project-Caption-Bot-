@@ -1,5 +1,6 @@
 let express=require("express");
 // const {spawn} = require('child_process');
+require('dotenv').config();
 let app=express();
 var port=process.env.PORT || 8000;
 

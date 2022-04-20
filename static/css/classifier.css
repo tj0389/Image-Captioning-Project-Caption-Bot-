@@ -141,13 +141,15 @@ body {
 }
 
 .loader {
+  margin-top: 100px;
   display: none;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .loading {

@@ -61,9 +61,11 @@ async function predict() {
     return;
   }
 
+  document.getElementById("image-display").style.filter='blur(8px)'
   document.getElementsByClassName("loader")[0].style.display = "block";
 
-
+  // filter: blur(8px);
+  
   if (loaded==0){
     model1 = await tf.loadLayersModel('/model1/model1.json');
     model2 = await tf.loadLayersModel('/model2/model2.json');
@@ -71,8 +73,6 @@ async function predict() {
     loaded=1;
   }
   
- 
-
   // let meanImageNetRGB = tf.tensor1d([123.68, 116.779, 103.939]);
   // let tensor = tf.browser.fromPixels(imagePreview)
   //   .resizeNearestNeighbor([224, 224])
@@ -154,8 +154,9 @@ async function predict() {
       pred_caption+=final_cap[index];
       pred_caption+=" ";
   }
-
+  
   document.getElementsByClassName("loader")[0].style.display = "none";
+  document.getElementById("image-display").style.filter=""
   predResult.innerHTML = pred_caption;
   show(predResult);
 

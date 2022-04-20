@@ -12,6 +12,7 @@
   "dependencies": {
     "@tensorflow/tfjs": "^2.7.0",
     "arraylist": "^0.1.0",
+    "dotenv": "^16.0.0",
     "eel": "^0.1.1",
     "express": "^4.17.1",
     "requirejs": "^2.3.6"
